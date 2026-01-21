@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     define: {
       // 1. Explicitly replace the API Key
-      'process.env.API_KEY': JSON.stringify(env.API_KEY),
+      // FIX: Prioritize GEMINI_API_KEY as per debugging report, fallback to API_KEY
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY || env.API_KEY),
       // 2. Define a global process object to prevent "ReferenceError: process is not defined"
       // likely caused by dependencies expecting a Node environment.
       'process.env': {},
