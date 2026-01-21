@@ -2,20 +2,18 @@ import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
-  // Load env file based on `mode` in the current working directory.
-  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
+  // Use '.' to look for .env in the current directory
   const env = loadEnv(mode, '.', '');
   
   return {
     plugins: [react()],
     define: {
-      // Define process.env.API_KEY global for the browser code to use
+      // Explicitly replace ONLY the API_KEY string in the code.
+      // Do NOT use 'process.env': {} because it overwrites process.env.NODE_ENV and breaks React.
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
-      // Fallback for other process.env usage if necessary (though API_KEY is the main one)
-      'process.env': {} 
     },
     build: {
-      outDir: 'build', // Matches vercel.json outputDirectory
+      outDir: 'build',
     },
   };
 });

@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI 建工法律咨询营销系统</title>
-    <!-- Tailwind CSS (CDN for simplicity) -->
+    <!-- CRITICAL FIX: Polyfill 'process' for browser environment -->
+    <script>
+      window.process = window.process || { env: { NODE_ENV: 'production' } };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Mammoth.js for .docx parsing (Global window object) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #f8fafc; /* Slate-50 */
-        color: #0f172a; /* Slate-900 */
+        background-color: #f8fafc;
+        color: #0f172a;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display', serif;
       }
-      /* Custom scrollbar for better aesthetics */
       ::-webkit-scrollbar {
         width: 6px;
         height: 6px;
