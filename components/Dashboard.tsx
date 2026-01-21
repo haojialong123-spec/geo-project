@@ -76,7 +76,7 @@ const Dashboard: React.FC<DashboardProps> = ({ records, onGenerateClick }) => {
                         </div>
                       </div>
                     ) : (
-                      <span className="text-slate-300 italic text-xs">Waiting for analysis...</span>
+                      <span className="text-slate-300 italic text-xs">等待分析...</span>
                     )}
                   </td>
 
@@ -96,7 +96,7 @@ const Dashboard: React.FC<DashboardProps> = ({ records, onGenerateClick }) => {
                             {result.evidence_analysis?.description || '证据链待确认'}
                          </p>
                          <div className="pt-2 border-t border-slate-100 mt-2">
-                             <span className="text-[10px] text-slate-400 uppercase tracking-wide">Keywords</span>
+                             <span className="text-[10px] text-slate-400 uppercase tracking-wide">核心关键词</span>
                              <p className="text-xs text-slate-500 mt-0.5">{result.evidence_analysis?.keywords?.join(', ')}</p>
                          </div>
                       </div>

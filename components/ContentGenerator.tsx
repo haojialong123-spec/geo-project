@@ -141,7 +141,7 @@ const ContentGenerator: React.FC<ContentGeneratorProps> = ({ record, onBack }) =
           <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] sticky top-28 max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-thin">
             <div className="mb-6">
                <h3 className="font-serif text-lg font-bold text-slate-900">GEO 策略配置</h3>
-               <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">Brand & Context Injection</p>
+               <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">品牌与语境注入</p>
             </div>
             
             {/* AI Recommendation Box */}
@@ -149,7 +149,7 @@ const ContentGenerator: React.FC<ContentGeneratorProps> = ({ record, onBack }) =
                 <div className="mb-8 bg-gradient-to-br from-indigo-50 to-slate-50 p-5 rounded-xl border border-indigo-100/50">
                     <div className="flex items-center text-indigo-800 font-bold text-[10px] uppercase mb-2 tracking-wider">
                         <Sparkles size={10} className="mr-1" />
-                        GEO Long-tail Strategy
+                        GEO 长尾策略推荐
                     </div>
                     <p className="text-slate-800 text-sm font-medium leading-relaxed font-serif">
                         {record.result.marketing_direction}
@@ -162,7 +162,7 @@ const ContentGenerator: React.FC<ContentGeneratorProps> = ({ record, onBack }) =
                 
                 {/* 1. Quotes Selection (Extracted) */}
                 <div>
-                  <SectionHeader icon={<Quote size={12} />} title="案源提取原话" subtitle="Source Material" />
+                  <SectionHeader icon={<Quote size={12} />} title="案源提取原话" subtitle="原始素材" />
                   <div className="space-y-3 max-h-48 overflow-y-auto pr-1 scrollbar-thin">
                     {record.result?.detected_issues.length === 0 ? (
                         <p className="text-xs text-slate-400 italic p-2">未检测到明显痛点原话。</p>
@@ -192,12 +192,12 @@ const ContentGenerator: React.FC<ContentGeneratorProps> = ({ record, onBack }) =
 
                 {/* 2. Issues Selection (Library) */}
                 <div>
-                  <SectionHeader icon={<Tag size={12} />} title="法律痛点库" subtitle="Pain Point Library" />
+                  <SectionHeader icon={<Tag size={12} />} title="法律痛点库" subtitle="场景标签" />
                   
                   {/* Extracted Issues Tags (Chips) */}
                   {record.result?.detected_issues.length > 0 && (
                      <div className="mb-4 pb-4 border-b border-slate-50">
-                        <p className="text-[10px] text-slate-400 mb-2 uppercase tracking-wide">AI Recommended Tags</p>
+                        <p className="text-[10px] text-slate-400 mb-2 uppercase tracking-wide">AI 推荐标签</p>
                         <div className="flex flex-wrap gap-2">
                             {record.result.detected_issues.map((issue, idx) => (
                                 <button
@@ -322,12 +322,12 @@ const ContentGenerator: React.FC<ContentGeneratorProps> = ({ record, onBack }) =
                         </div>
                    </div>
                    <p className="text-slate-900 font-serif font-bold text-xl tracking-tight mb-3">
-                     Generating GEO Content
+                     正在生成 GEO 营销内容
                    </p>
                    <div className="text-xs text-slate-500 space-y-2 text-center font-mono">
-                     <p>Processing Legal Context...</p>
-                     <p>Injecting Brand Assets...</p>
-                     <p>Optimizing for Beijing Region...</p>
+                     <p>正在解析法律语境...</p>
+                     <p>正在注入品牌资产...</p>
+                     <p>正在优化北京地域特征...</p>
                    </div>
                 </div>
               ) : generatedContent[activeTab] ? (

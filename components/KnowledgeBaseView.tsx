@@ -53,7 +53,7 @@ const KnowledgeBaseView: React.FC = () => {
           <div className="bg-white p-10 rounded-2xl border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] col-span-2">
             <div className="flex items-center mb-8 pb-4 border-b border-slate-100">
                 <Info className="w-5 h-5 text-slate-400 mr-2"/>
-                <h3 className="font-bold text-slate-900 font-serif">系统知识库详情 (Raw Context)</h3>
+                <h3 className="font-bold text-slate-900 font-serif">系统知识库详情 (原始内容)</h3>
             </div>
             <div className="bg-slate-50/50 rounded-xl p-8 border border-slate-100/50">
                 <MarkdownRenderer content={FIRM_KNOWLEDGE_BASE} />

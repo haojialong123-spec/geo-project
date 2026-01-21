@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
             <div className="p-2 bg-amber-600 rounded-lg shadow-lg shadow-amber-900/20">
                 <HardHat className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xs font-medium tracking-[0.2em] text-amber-600 uppercase">ZhengJi Law</span>
+            <span className="text-xs font-medium tracking-[0.2em] text-amber-600 uppercase">正己律所</span>
           </div>
           <h1 className="text-xl font-serif text-white tracking-wide mt-3">AI 建工营销中台</h1>
         </div>
@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
           
           <div className="mt-8 mb-3 px-4 flex items-center">
             <div className="h-px bg-slate-800 flex-1"></div>
-            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2">Knowledge</span>
+            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2">知识库</span>
             <div className="h-px bg-slate-800 flex-1"></div>
           </div>
           
@@ -55,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
 
           <div className="mt-8 mb-3 px-4 flex items-center">
              <div className="h-px bg-slate-800 flex-1"></div>
-             <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2">Tools</span>
+             <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2">工具箱</span>
              <div className="h-px bg-slate-800 flex-1"></div>
           </div>
 
@@ -79,10 +79,10 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
                 <UserCircle size={20} className="text-slate-400" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-white truncate">Admin User</p>
+              <p className="text-sm font-medium text-white truncate">管理员</p>
               <div className="flex items-center mt-1">
                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></span>
-                 <p className="text-xs text-slate-500">GEO Engine Active</p>
+                 <p className="text-xs text-slate-500">GEO 引擎已激活</p>
               </div>
             </div>
           </div>
